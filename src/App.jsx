@@ -5,7 +5,9 @@ import Banner from "./Banner"
 import Catogory from "./Catogory"
 import Createaccount from "./CreateAccount";
 import Footer from "./Footer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
+
 import Hoodie from "./Shirts";
 import MensTrousers from "./Catogory(products)/MensTrousers";
 import Login from "./login";
@@ -20,6 +22,7 @@ import BrandPage from "./pages/BrandPage";
 import AdminDashboard from "./AdminDashboard";
 import Hoodies from "./Catogory(products)/Hoodie1";
 import Sneakers from "./Catogory(products)/Sneakers";
+
 import TShirts from "./Catogory(products)/TShirt";
 import Perfumes from "./Catogory(products)/Perfumes";
 import Checkout from "./Checkout";
@@ -34,7 +37,7 @@ function App() {
   const isauthenticated = !!storedUser;
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen flex flex-col">
         <Navbar search={search} setSearch={setSearch} />
 
@@ -95,8 +98,9 @@ function App() {
 
       <Help />
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
 export default App;
+
